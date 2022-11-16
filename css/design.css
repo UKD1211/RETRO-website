@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "Retro font";
+    src: url(../font/forward.TTF) format("truetype");
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Retro font';
+    font-size: 1.1em;
+    line-height: 1.5em;
+    text-align: center;
+    background-image: url(../img/black.jpg);
+}
+nav {
+    position: fixed;
+    z-index: 200;
+    left: 10px;
+    top: 35%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.tilt {
+    width: 130px;
+    color:#FFC107;
+    text-align: right;
+    display: block;
+    transform: rotate(-20deg);
+    margin-top: 40px;
+    transition: all 0.5s ease;
+    transform-origin: 0 0;
+    border-bottom: #FFC107 1px solid;
+}
+.tilt:hover {
+    transform-origin: -30% -30%;
+    background: #715871;
+    color: #fff;
+}
+header {
+    height: 80%;
+    background: url(../img/retro.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+header h1 {
+    position: relative;
+    top: 50%;
+    font-size: 4em;
+}
+header h1 a {
+    color: #fff;
+}
+header h1 a:hover {
+    animation-name: multicol;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes multicol {
+    0% {
+        text-shadow: 0 0 #fff;
+    }
+    100% {
+        text-shadow: 0 0 rgba(255, 255, 255, 50), -30px -30px 0 rgba(255, 0, 0, 0.4), -20px -20px 0 rgba(255, 165, 0, 0.4), -10px -10px 0 rgba(255, 255, 0, 0.4), 10px 10px 0 rgba(238, 130, 238, 0.4), 20px 20px 0 rgba(75, 0, 130, 0.4), 30px 30px 0 rgba(2, 92, 2, 0.4);
+    }
+}
+.signup {
+    padding: 100px 0;
+    background: #38394a url(../img/vaporwave.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* background-blend-mode: darken; */
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* z-index: 1; */
+    color: #fff;
+}
+#sign {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    font-size: 1.3em;
+    text-shadow: 0 0 black;
+    transition: all 0.5s ease;
+}
+#sign:hover {
+    text-shadow: 20px 20px 12px rgba(0, 0, 0, .5);
+    padding: 20px 300px;
+    background:#E040FB;
+}
+#about {
+    width: 1200px;
+    margin: 100px auto;
+}
+#about h2 {
+    margin-bottom: 30px;
+}
+h2 {
+    color: #fff;
+}
+h2.alt {
+    color: gray;
+    font-weight: 100;
+}
+#about::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.panel {
+    width: 30%;
+    padding: 0 1.5%;
+    float: left;
+}
+.blob {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 6em;
+    line-height: 200px;
+    vertical-align: middle;
+    color: #fff;
+}
+.one {
+    background-color: #d2cf65;
+    background-repeat: repeat-x;
+    background-size: 24px 300px;
+    background-position: 3px 0, 3px 0, 15px -100px, 15px -100px;
+}
+.one:hover {
+    background-position: 3px -70px, 3px -70px, 15px -30px, 15px -30px;
+    background: url(../img/texture1.gif);
+}
+.two {
+    background-color: #46884b;
+    background-size: 5px 5px;
+    background-position: center;
+    
+}
+.two:hover {
+    background-size: 150px 150px;
+    background: url(../img/texture2.gif);
+}
+.three {
+    background-color: #9e6088;
+    box-shadow: none;
+    
+}
+.three:hover {
+    box-shadow: inset -45px -45px 100px #24263f;
+    background: url(../img/texture3.gif);
+}
+.production {
+    padding: 100px 0;
+    background: #384839 url(../img/gridbackground.jpg);
+    color: #fff;
+}
+#spin {
+    width: 600px;
+    display: block;
+    margin: 80px auto;
+    background: #333;
+    transform: perspective(550px) translateZ(-500px) rotateY(90deg);
+    transition: all 0.5s ease;
+}
+.roll:hover > #spin {
+    transform: perspective(550px) translateZ(150px) rotateY(0deg);
+}
+footer {
+    margin-top: 50px;
+    padding: 50px;
+}
+
+footer p {
+    color: #fff;
+}
